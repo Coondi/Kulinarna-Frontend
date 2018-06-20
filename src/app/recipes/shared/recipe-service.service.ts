@@ -14,7 +14,14 @@ export class RecipeServiceService {
   recipeCard : RecipeModel;
   selectedRecipe : RecipeModel;
   recipeList : RecipeModel[];
-  baseURL: string = "http://localhost:44932/api/recipe";
+
+
+
+  // --------------W TYM MIEJSCU TRZEBA ZMIENIC NA ADRES LOCALHOST Z BACKENDU------------------------ 
+  baseURL: string = "http://localhost:62635/api/recipe";
+
+
+
   constructor(private _http : Http) {}
 
   AddRecipe(recipe : RecipeModel) {
