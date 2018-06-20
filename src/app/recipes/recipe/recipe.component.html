@@ -1,0 +1,38 @@
+<div class="formularz">
+    <h1 class="text-white text-center">Dodaj przepis</h1>
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="recipeService.selectedRecipe.id">
+    <form class="mt-4" #recipeForm="ngForm" (ngSubmit)="onSubmit(recipeForm)">
+        <div class="form-group row">
+            <label for="nazwaPrzepisu" class="col-sm-5 col-form-label text-center text-white">Nazwa przepisu:</label>
+            <div class="col-sm-7">
+                <input only-letters-input type="text" maxlength="50" class="form-control mt-2" name="Name" #Name="ngModel" [(ngModel)]="recipeService.selectedRecipe.name" placeholder="Podaj nazwę przepisu..." required>
+                <div class="validation-error text-warning" *ngIf="Name.invalid && Name.touched">To pole jest wymagane</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-5 d-flex flex-column">
+                <label for="pierwszySkladnik" class="col-form-label text-center text-white">Składniki:</label>
+            </div>
+            <div class="col-sm-7">
+                <textarea name="Components" class="form-control" #Components="ngModel" [(ngModel)]="recipeService.selectedRecipe.components" placeholder="Dodaj składniki..." required></textarea>
+                <div class="validation-error text-warning" *ngIf="Components.invalid && Components.touched">To pole jest wymagane</div>
+            </div>
+        </div>
+        <div class="form-group row">
+                <label for="czasPrzygotowania" class="col-sm-5 col-form-label text-center text-white">Czas przygotowania(min):</label>
+                <div class="col-sm-7">
+                    <input type="number" class="form-control mt-2" name="PreparationTime" #PreparationTime="ngModel" [(ngModel)]="recipeService.selectedRecipe.preparationTime" placeholder="Podaj czas przygotowania..." required>
+                    <div class="validation-error text-warning" *ngIf="PreparationTime.invalid && PreparationTime.touched">To pole jest wymagane</div>
+                </div>
+            </div>    
+        <div class="form-group row">
+            <label for="sposobPrzygotowania" class="col-sm-5 col-form-label text-center text-white">Opisz sposób przygotowania:</label>
+            <div class="col-sm-7">
+                <textarea name="Description" class="form-control" #Description="ngModel" [(ngModel)]="recipeService.selectedRecipe.description" placeholder="Opisz przygotowanie..." required></textarea>
+                <div class="validation-error text-warning" *ngIf="Description.invalid && Description.touched">To pole jest wymagane</div>
+            </div>
+        </div>
+        <button class="btn btn-light float-right addRecipe" [disabled]="!recipeForm.valid"  type="submit">Potwierdź</button>
+        <button class="btn btn-outline-warning float-right mr-3" type="button" (click)="clearForm(recipeForm)">Wyczyść pola</button>
+    </form>
+</div>

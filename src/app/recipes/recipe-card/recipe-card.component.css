@@ -1,0 +1,24 @@
+.content{
+    background-color: rgb(240, 196, 162);
+    padding: 1rem 1rem; 
+}
+.content .header{
+    font-family: cursive;
+    font-size: 3.2rem;
+}
+.content .placeTime{
+    font-family: cursive;
+    font-size: 5rem;
+    max-height: 160px;
+}
+.content .placeComponents, .placeDescription{
+    font-family: cursive;
+    font-size: 1.6rem;
+    height: 400px;
+    min-height: 400px;
+    max-height: 400px;
+}
+.content .placeName{
+    font-size: 5rem;
+    height: 140px;
+}

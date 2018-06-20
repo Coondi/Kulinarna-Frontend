@@ -1,0 +1,45 @@
+<div class="formularz">
+  <form class="sticky-top bg-danger">
+    <label for="sortowanie" class="col-sm-3 col-form-label text-left text-white sortowanieHeader">Sortuj według:</label>
+    <label for="szukanie" class="col-sm-3 col-form-label text-left text-white szukanieHeader">Szukaj:</label>
+    <div class="form-group row">
+        <div class="col-sm-4">
+            <select class="custom-select custom-select-lg">
+                <option selected>Wybierz...</option>
+                <option value="1">Jakości przepisu</option>
+                <option value="2">Trudności wykonania</option>
+                <option value="3">Czasie przygotowania</option>
+            </select>
+        </div>
+        <button class="btn btn-light h-25 mt-1" type="submit">Sortuj</button>
+        <div class="col-sm-4">   
+          <input [formControl]="queryField" class="form-control form-control-lg" type="text" ng-model="szukane" placeholder="Wyszukaj..." autofocus/>
+        </div>           
+    </div> 
+  </form>
+
+
+  <ul *ngFor="let result of results | slice:0:3; let last=last; let first=first; let recipe of recipeService.recipeList " class="list-group list-group-flush list-unstyled">   
+    <h1 class="listHeader text-danger text-center" *ngIf="first" >Wyszukiwane przepisy:</h1>  
+     <div class="list-group-item searchRecipe">
+          <li class="list-item text-center">{{recipe.name}}</li>
+       <button class="editButton" (click)="showForEdit(recipe)"><i class="fas fa-edit editIcon"></i>Edytuj</button>
+       <a href="#recipeCard"><button class="btn btn-danger float-right"type="button" (click)="recipeCard(recipe)" onclick="showDiv()">Pokaż więcej</button></a>
+     </div>
+  </ul>
+
+
+<div class="bg-danger mt-3 p-3">
+  <h1 class="listHeader text-white text-center">Wszystkie przepisy:</h1>
+  <ul *ngFor="let recipe of recipeService.recipeList"  class="list-group list-group-flush list-unstyled">
+    <div class="list-group-item recipe">
+      <li class="list-item" >{{recipe.name}}</li>
+      <p class="list-item">{{recipe.description}}</p>
+      <button class="editButton" (click)="showForEdit(recipe)"><i class="fas fa-edit editIcon"></i>Edytuj</button>
+      <button class="deleteButton" (click)="DeleteRecipe(recipe.id)"><i class="fas fa-trash-alt trashIcon"></i>Usuń</button>
+      <a href="#recipeCard"><button class="btn btn-danger float-right"type="button" (click)="recipeCard(recipe)" onclick="showDiv()">Pokaż więcej</button></a>
+    </div>
+  </ul>
+</div>
+
+</div>  

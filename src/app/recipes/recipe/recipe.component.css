@@ -1,0 +1,49 @@
+/** ZAWARTOŚĆ STRONY **/
+.content label{
+    font-size: 2rem;
+}
+.content button{
+    height: 2.8rem;
+    width: 5.2rem;
+}
+.formularz label{
+    font-size: 1.6rem;
+}
+.formularz h1{
+    font-family: cursive;
+    font-size: 3.5rem;
+}
+.formularz textarea{
+    height: 200px;
+}
+
+.formularz button{
+    width: 130px;
+    font-family: cursive;   
+}
+.formularz .editButton{
+    width: 6rem;
+}
+.formularz .deleteButton{
+    width: 5rem;
+}
+.formularz .trashIcon{
+    color: red;
+}
+.formularz li{
+    font-size: 2rem;
+}
+.slider h1{
+    font-family: cursive;
+    font-size: 6.5rem;
+}
+.slider p{
+    font-family: cursive;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.validation-error{
+    font-size: 1.2rem;
+}
+
+

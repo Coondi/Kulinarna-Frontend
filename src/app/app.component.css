@@ -1,0 +1,31 @@
+/** TOP STRONY **/
+.navbar, .slider{
+    background-color: rgb(240, 196, 162);
+    padding: 1rem 0;   
+}
+.slider h1{
+    font-family: cursive;
+    font-size: 6.5rem;
+}
+.slider p{
+    font-family: cursive;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.navbar a{
+    font-size: 1.3rem;
+}
+.navbar a:first-child{
+    font-weight: 800;
+}
+.carousel-item{
+    width: 100%;
+    height: 500px;
+}
+.carousel a span{
+    width: 70px;
+    height: 70px;  
+}
+
+
+

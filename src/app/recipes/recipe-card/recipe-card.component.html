@@ -1,0 +1,25 @@
+<form class="content mb-1" id="kartaPrzepisu" style="display:none" #recipeCard="ngForm" (ngSubmit)="onSubmit(recipeCard)">
+  <div class="container-fluid" id="recipeCard">
+        <textarea class="form-control bg-danger text-center text-white placeName" name="Name" #Name="ngModel" [(ngModel)]="recipeService.recipeCard.name" readonly></textarea>
+        <div class="row mt-3" >
+          <div class="col-md-4">
+              <h1 class="header text-white text-center">Składniki</h1>
+              <textarea class="form-control bg-danger text-white placeComponents p-4" name="Components" #Components="ngModel" [(ngModel)]="recipeService.recipeCard.components" readonly></textarea>  
+          </div>
+          <div class="col-md-4">
+              <h1 class="header text-white text-center">Czas przygotowania(min)</h1>
+              <textarea class="form-control bg-danger text-center text-white placeTime p-3" name="PreparationTime" #PreparationTime="ngModel" [(ngModel)]="recipeService.recipeCard.preparationTime" readonly></textarea>  
+               
+            </div>
+          <div class="col-md-4">
+            <h1 class="header text-white text-center">Sposób przygotowania</h1>
+            <textarea class="form-control bg-danger text-white placeDescription p-4" name="Description" #Description="ngModel" [(ngModel)]="recipeService.recipeCard.description" readonly></textarea> 
+          </div>
+      </div>
+  </div>   
+  <div class="text-center">
+        <button class="btn btn-light mt-4 w-25 closeBtn" type="button" onclick="hideDiv()">Zamknij</button>
+  </div>
+</form>
+
+            

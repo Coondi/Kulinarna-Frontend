@@ -1,0 +1,77 @@
+/** ZAWARTOŚĆ STRONY **/
+.sticky-top{
+    background-color: #EBDDC7;
+    padding-bottom: .2rem;
+    margin-bottom: .3rem;
+    padding: .5rem;
+}
+.content button{
+    height: 2.8rem;
+    width: 5.2rem;
+}
+.formularz button{
+    width: 130px;
+    font-family: cursive;   
+}
+.formularz .editButton{
+    width: 6rem;
+    margin-right: .3rem;
+}
+.formularz .deleteButton{
+    width: 5rem;
+}
+.formularz .trashIcon{
+    color: red;
+}
+.formularz li{
+    font-size: 2.2rem;
+    font-family: cursive;
+    margin-bottom: .5rem;
+}
+.formularz .recipe{
+    border: 1px solid red;
+    background-color: rgb(240, 196, 162);
+    margin-bottom: .3rem;
+    border-radius: .5rem;
+}
+.formularz .searchRecipe{
+    border: 1px solid red;
+    background-color: rgb(240, 196, 162);
+    margin-bottom: .3rem;
+    border-radius: .5rem;
+    height: 130px;
+}
+.sortowanieHeader{
+    font-family: cursive;
+    font-size: 1.7rem;
+}
+.szukanieHeader{
+    font-family: cursive;
+    font-size: 1.7rem;
+    margin-left: 12rem;
+}
+.formularz .listHeader{
+    font-family: cursive;
+    font-size: 2.3rem;
+}
+.formularz p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 700px;
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+.searchRecipe li{
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
+

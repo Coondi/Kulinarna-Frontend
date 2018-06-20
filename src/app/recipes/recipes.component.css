@@ -1,0 +1,13 @@
+/** ZAWARTOŚĆ STRONY **/
+.content, .formularz{
+    background-color: #EBDDC7;
+    padding: 1rem 1rem; 
+}
+.formularz .rightColumn{
+    overflow-y: scroll;
+    max-height: 782px;
+}
+
+
+
+
