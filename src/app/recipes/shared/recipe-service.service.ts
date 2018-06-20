@@ -18,7 +18,7 @@ export class RecipeServiceService {
 
 
   // --------------W TYM MIEJSCU TRZEBA ZMIENIC NA ADRES LOCALHOST Z BACKENDU------------------------ 
-  baseURL: string = "http://localhost:49695";
+  baseURL: string = "http://localhost:49695/";
 
 
 
