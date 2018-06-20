@@ -28,18 +28,18 @@ export class RecipeServiceService {
     var body = JSON.stringify(recipe);
     var header = new Headers({'Content-Type':'application/json'});
     var request = new RequestOptions({method: RequestMethod.Post,  headers : header});
-    return this._http.post(this.baseURL + '/api/recipe',body,request).pipe(map(res => res.json())); 
+    return this._http.post(this.baseURL + 'api/recipe',body,request).pipe(map(res => res.json())); 
   }
 
   UpdateRecipe(id , recipe) {
     var body = JSON.stringify(recipe);    
     var header = new Headers({'Content-Type':'application/json'});
     var request = new RequestOptions({method: RequestMethod.Put, headers : header});
-    return this._http.put(this.baseURL + '/api/recipe/' + id,body,request).pipe(map(res => res.json())); 
+    return this._http.put(this.baseURL + 'api/recipe/' + id,body,request).pipe(map(res => res.json())); 
   }
 
   GetRecipeList() {
-    this._http.get(this.baseURL + '/api/recipe').pipe(map((data : Response) => {
+    this._http.get(this.baseURL + 'api/recipe').pipe(map((data : Response) => {
       return data.json() as RecipeModel[];
     })).toPromise().then(x => {
       this.recipeList = x;
@@ -47,18 +47,18 @@ export class RecipeServiceService {
   }  
 
   DeleteRecipe(id: number) {
-    return this._http.delete(this.baseURL +'/api/recipe/delete/' + id);
+    return this._http.delete(this.baseURL +'api/recipe/delete/' + id);
   }
 
   searchName(queryString: string) {
-    return this._http.get(this.baseURL + '/api/recipe/searchName/' + queryString);
+    return this._http.get(this.baseURL + 'api/recipe/searchName/' + queryString);
   }
 
   searchComponents(queryString: string) {
-    return this._http.get(this.baseURL + '/api/recipe/searchComponents/' + queryString);
+    return this._http.get(this.baseURL + 'api/recipe/searchComponents/' + queryString);
   }
   searchTime(queryString: string) {
-    return this._http.get(this.baseURL + '/api/recipe/searchTime/' + queryString);
+    return this._http.get(this.baseURL + 'api/recipe/searchTime/' + queryString);
   }
 
 }
